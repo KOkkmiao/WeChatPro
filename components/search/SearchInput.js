@@ -1,4 +1,4 @@
-// components/test.js
+// components/search/SearchInput.js
 Component({
   /**
    * 组件的属性列表
