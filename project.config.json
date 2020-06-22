@@ -66,8 +66,16 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "分类页面",
+					"name": "分类选项",
 					"pathName": "pages/category/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品页面",
+					"pathName": "pages/goods_list/index",
+					"query": "cid=5",
 					"scene": null
 				}
 			]

@@ -18,6 +18,10 @@ page {
   font-size: 30rpx;
   height: 80rpx;
 }
+.cates .cates_container .active {
+  color: var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}
 .cates .cates_container .right_content {
   flex: 5;
 }

@@ -3,12 +3,14 @@
     <view class="cates_container">
         <!-- 左侧内容 -->
         <scroll-view scroll-y class="left_menu">
-            <view class="menu_item" wx:for="{{leftList}}" wx:for-item="item" wx:key="*this">
+            <view class="menu_item {{index===currentIndex?'active':''}}" wx:for="{{leftList}}"
+             wx:for-item="item" wx:key="*this"
+            bindtap="onhandleItemTap" data-index="{{index}}">
                 {{item}}
             </view>
         </scroll-view>
         <!-- 右侧内容 -->
-        <scroll-view scroll-y class="right_content">
+        <scroll-view scroll-top="{{scrollTop}}" scroll-y class="right_content">
             <view class="goos_group" wx:for="{{rigthList}}" wx:for-item="item1" wx:key="cat_id">
                 <!--头部内容 -->
                 <view class="goods_title">
