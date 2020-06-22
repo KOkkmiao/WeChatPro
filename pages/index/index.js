@@ -8,7 +8,9 @@ Page({
    */
   data: {
     swiperList: [],
-    cateList: []
+    cateList: [],
+    //获取楼层数据
+    floorList:[]
   },
 
   /**
@@ -17,6 +19,17 @@ Page({
   onLoad: function (options) {
     this.getSwiperList();
     this.getCateList();
+    this.getFloorList();
+  },
+  getFloorList() {
+    request({
+        url: "https://api-hmugo-web.itheima.net/api/public/v1/home/floordata"
+      })
+      .then(result => {
+        this.setData({
+          floorList: result.data.message
+        })
+      })
   },
   getSwiperList() {
     request({
