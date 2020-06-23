@@ -3,5 +3,7 @@
     "SearchInput":"../../components/search/SearchInput",
     "Tab":"../../components/tab/Tab"
   },
-  "navigationBarTitleText": "商品内容"
+  "navigationBarTitleText": "商品内容",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }

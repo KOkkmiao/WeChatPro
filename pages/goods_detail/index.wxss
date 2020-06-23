@@ -1,1 +1,3 @@
-/* pages/goods_detail/index.wxss */
+.deatil_wrapper .swiper_index swiper swiper-item {
+  height: calc(213.33333333);
+}

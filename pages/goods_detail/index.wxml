@@ -1,2 +1,30 @@
-<!--pages/goods_detail/index.wxml-->
-<text>pages/goods_detail/index.wxml</text>
+<view class="deatil_wrapper">
+    <view class="swiper_index">
+        <swiper>
+            <swiper-item wx:for="{{goodsDetail.pics}}" 
+            wx:key="pics_id">
+                <image src="{{item.pics_mid}}" mode="widthFix">
+
+                </image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="goods_content">
+        <!-- 价格 -->
+        <view class="goods_price">
+            ￥{{goodsDetail.goods_price}}
+        </view>
+        <!-- 名称 -->
+        <view class="goods_content">
+            {{goodsDetail.goods_name}}
+        </view>
+        <!-- 收藏 -->
+        <view class="favorite icon-shoucang1">
+            收藏
+        </view>
+    </view>
+    <!-- 富文本内容 -->
+    <block class="goods_introduce">
+        {{goodsDetail.goods_introduce}}
+    </block>
+</view>

@@ -1,0 +1,34 @@
+.goos_detail {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    .image_wrapp {
+        display        : flex;
+        flex           : 2;
+        justify-content: center;
+        align-items    : center;
+
+        image {
+            width: 70%;
+        }
+    }
+
+    .goods_content {
+        display       : flex;
+        flex-direction: column;
+        flex          : 3;
+        justify-content: space-around;
+        .content {
+            width:500rpx;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:2;
+        }
+
+        .goods_price {
+            padding: 20rpx 0;
+            color: var(--themeColor);
+            font-size: 32rpx;
+        }
+    }
+}

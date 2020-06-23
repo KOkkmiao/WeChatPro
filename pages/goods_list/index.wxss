@@ -1,0 +1,31 @@
+.goos_detail {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.goos_detail .image_wrapp {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+.goos_detail .image_wrapp image {
+  width: 70%;
+}
+.goos_detail .goods_content {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  justify-content: space-around;
+}
+.goos_detail .goods_content .content {
+  width: 500rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goos_detail .goods_content .goods_price {
+  padding: 20rpx 0;
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
