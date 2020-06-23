@@ -23,10 +23,25 @@ Page({
 
   },
   async getGoodsDetail(goods_id) {
-    const result = await request({url:"/goods/detail",data:{goods_id:goods_id}});
+    const result = await request({ url: "/goods/detail", data: { goods_id: goods_id } });
     console.log(result);
     this.setData({
-      goodsDetail:result
+      goodsDetail: {
+        pics: result.pics,
+        goods_price: result.goods_price,
+        goods_name: result.goods_name,
+        goods_introduce: result.goods_introduce
+      }
     });
+  },
+  prvViewImgeHandle(e) {
+    const urls = this.data.goodsDetail.pics.map(v => v.pics_big)
+    const {index}  = e.currentTarget.dataset;
+    console.log(index);
+    
+    wx.previewImage({
+      current: urls[index], // 当前显示图片的http链接
+      urls: urls // 需要预览的图片http链接列表
+    })
   }
 })

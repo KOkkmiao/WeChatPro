@@ -1,8 +1,8 @@
 <view class="deatil_wrapper">
     <view class="swiper_index">
-        <swiper>
-            <swiper-item wx:for="{{goodsDetail.pics}}" 
-            wx:key="pics_id">
+        <swiper autoplay circular indicator-dots>
+            <swiper-item wx:for="{{goodsDetail.pics}}" wx:key="pics_id" bindtap="prvViewImgeHandle"
+                data-index="{{index}}">
                 <image src="{{item.pics_mid}}" mode="widthFix">
 
                 </image>
@@ -14,17 +14,52 @@
         <view class="goods_price">
             ￥{{goodsDetail.goods_price}}
         </view>
-        <!-- 名称 -->
-        <view class="goods_content">
-            {{goodsDetail.goods_name}}
+        <view class="content_fav">
+            <!-- 名称 -->
+            <view class="goods_content">
+                {{goodsDetail.goods_name}}
+            </view>
+            <view class="fav">
+                <text class="iconfont icon-shoucang"></text>
+                <view class="favorite">
+                    收藏
+                </view>
+            </view>
         </view>
         <!-- 收藏 -->
-        <view class="favorite icon-shoucang1">
-            收藏
+    </view>
+    <view class="goods_info">
+        <!-- 图文详情 -->
+        <view class="goods_title">
+            图文详情
+        </view>
+        <!-- 富文本内容 -->
+        <view class="goods_introduce">
+            <rich-text nodes="{{goodsDetail.goods_introduce}}">
+            </rich-text>
         </view>
     </view>
-    <!-- 富文本内容 -->
-    <block class="goods_introduce">
-        {{goodsDetail.goods_introduce}}
-    </block>
+    <view class="btm_tool">
+        <view class="tool_item">
+            <view class="iconfont icon-kefu"></view>
+            <view>客服</view>
+            <button open-type="contact"></button>
+        </view>
+        <view class="tool_item">
+            <view class="iconfont icon-yixianshi-"></view>
+            <view>分享</view>
+            <button open-type="share"></button>
+        </view>
+        <view class="tool_item">
+            <view class="iconfont icon-gouwuche"></view>
+            <view>购物车</view>
+        </view>
+        <view class="tool_item btn_cart">
+            加入购物车
+        </view>
+        <view class="tool_item btn_buy">
+            立即购买
+        </view>
+    </view>
+
 </view>
