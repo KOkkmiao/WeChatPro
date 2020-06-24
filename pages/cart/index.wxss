@@ -1,1 +1,39 @@
-/* pages/cart/index.wxss */
+page {
+  height: 100%;
+}
+.backcolor {
+  background-color: #ccc;
+  height: 100%;
+}
+.backcolor .good_detail {
+  font-size: 20rpx;
+  padding: 10rpx 0;
+}
+.backcolor .good_backcolor {
+  background-color: #fff;
+  border: 1rpx solid #000;
+}
+.backcolor .good_backcolor .all_check checkbox {
+  padding: 5rpx 0 3rpx 5rpx;
+}
+.backcolor .good_backcolor .goods_content {
+  display: flex;
+}
+.backcolor .good_backcolor .goods_content view {
+  flex: 1;
+  justify-items: center;
+  align-items: center;
+}
+.backcolor .good_backcolor .goods_content view checkbox {
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.backcolor .good_backcolor .goods_content navigator {
+  display: flex;
+  flex: 9;
+}
+.backcolor .good_backcolor .goods_content navigator .image image {
+  width: 80%;
+}

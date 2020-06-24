@@ -1,0 +1,50 @@
+page{
+    height: 100%;
+}
+.backcolor {
+    background-color: #ccc;
+    height: 100%;
+    .good_detail {
+        font-size: 20rpx;
+        padding: 10rpx 0;
+    }
+
+    .good_backcolor {
+        background-color: #fff;
+        border: 1rpx solid #000;
+        .all_check {
+            checkbox{
+                padding: 5rpx 0 3rpx 5rpx;
+            }
+        }
+
+        .goods_content {
+            display: flex;
+            view {
+                flex         : 1;
+                justify-items: center;
+                align-items  : center;
+                checkbox {
+                    height: 100%;
+                    display      : flex;
+                    justify-items: center;
+                    align-items  : center;
+                }
+            }
+
+            navigator {
+                 display: flex;
+                flex  : 9;
+                .image {
+                    image{
+                        width: 80%;
+                    }
+                   
+                }
+
+                .content {
+                }
+            }
+        }
+    }
+}

@@ -50,11 +50,7 @@
             <view>分享</view>
             <button open-type="share"></button>
         </view>
-        <view class="tool_item">
-            <view class="iconfont icon-gouwuche"></view>
-            <view>购物车</view>
-        </view>
-        <view class="tool_item btn_cart">
+        <view bindtap="handleCartAdd" class="tool_item btn_cart">
             加入购物车
         </view>
         <view class="tool_item btn_buy">

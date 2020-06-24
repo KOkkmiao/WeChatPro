@@ -41,7 +41,7 @@ page {
 .deatil_wrapper .goods_info .goods_title {
   font-size: 32rpx;
   font-weight: 600;
-  padding: 20rpx 0 20rpx 20rpx ;
+  padding: 20rpx 0 20rpx 20rpx;
   color: var(--themeColor);
   border-bottom: 6rpx solid #ccc;
 }
@@ -50,9 +50,10 @@ page {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   height: 90rpx;
+  border-top: 1rpx solid #ccc;
 }
 .deatil_wrapper .btm_tool .tool_item {
   flex: 1;
@@ -61,6 +62,7 @@ page {
   justify-content: center;
   align-items: center;
   font-size: 24rpx;
+  position: relative;
 }
 .deatil_wrapper .btm_tool .tool_item button {
   position: absolute;

@@ -1,2 +1,45 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="backcolor">
+    <!-- 购物车宝贝有多少 收货地址是哪里 -->
+    <view class="good_detail">
+        商品信息108件宝贝 收货地址是:qqqpqppqpq...
+    </view>
+    <!-- 商品内容 -->
+    <!-- 商品背景色 -->
+    <view class="good_backcolor">
+        <view class="all_check">
+            <checkbox>
+            </checkbox>
+        </view>
+        <!-- 商品 -->
+        <view class="goods_content">
+            <view>
+                <checkbox>
+                </checkbox>
+            </view>
+            <navigator open-type="navigate">
+                <view class="image">
+                    <image
+                        src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_400x400.jpg"
+                        mode="widthFix">
+                    </image>
+                </view>
+                 <view class="conent">
+                    <view>
+                        创意电脑桌子
+                    </view>
+                    <view class="good_price">
+                        ￥76
+                    </view>
+                    <view class="add_count">
+                        <button>-</button>
+                        <view class="number">1</view>
+                        <button>+</button>
+                    </view>
+                </view> 
+            </navigator>
+        </view>
+    </view>
+
+    <!-- 下标商品计算 -->
+
+</view>
