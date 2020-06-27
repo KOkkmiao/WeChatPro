@@ -33,7 +33,7 @@ page{
             }
 
             navigator {
-                 display: flex;
+                display: flex;
                 flex  : 9;
                 .image {
                     image{
@@ -42,7 +42,45 @@ page{
                    
                 }
 
-                .content {
+                .conent {
+                    display: flex;
+                    flex-direction: column;
+                    .goods_up{
+                        width: 100%;
+                        display: flex;
+                    }
+                    .goods_bottom{
+                        width: 100%;
+                        display: flex;
+                        .good_price{
+                            justify-content: left;
+                        }
+                        .add_count{
+                            display: flex;
+                            .button-left{
+                                padding: 0;
+                                width: 50rpx;
+                                border: 1rpx solid #ccc;
+                                z-index: 100;
+                            }
+                            .button-right{
+                                padding: 0;
+                                width: 50rpx;
+                                margin-right: 20rpx;
+                                border: 1rpx solid #ccc;
+                                z-index: 100;
+                            }
+                            .number{
+                                border-top: 1rpx solid #ccc;
+                                border-bottom: 1rpx solid #ccc;
+                                display: flex;
+                                align-items: center;
+                                /*实现水平居中*/
+                                justify-content: center;
+                                text-align: center;
+                            }
+                        }
+                    }
                 }
             }
         }

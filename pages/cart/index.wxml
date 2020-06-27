@@ -16,26 +16,28 @@
                 <checkbox>
                 </checkbox>
             </view>
-            <navigator open-type="navigate">
+            <navigator url="/pages/goods_detail/index?goods_id=43986" hover-stop-propagation="true">
                 <view class="image">
                     <image
                         src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_400x400.jpg"
                         mode="widthFix">
                     </image>
                 </view>
-                 <view class="conent">
-                    <view>
+                <view class="conent">
+                    <view class="goods_up">
                         创意电脑桌子
                     </view>
-                    <view class="good_price">
-                        ￥76
+                    <view class="goods_bottom">
+                        <view class="good_price">
+                            ￥76
+                        </view>
+                        <view class="add_count">
+                            <button bindtap="btnsub" class="button-left">-</button>
+                            <view class="number">1</view>
+                            <button bindtap="btnadd" class="button-right">+</button>
+                        </view>
                     </view>
-                    <view class="add_count">
-                        <button>-</button>
-                        <view class="number">1</view>
-                        <button>+</button>
-                    </view>
-                </view> 
+                </view>
             </navigator>
         </view>
     </view>

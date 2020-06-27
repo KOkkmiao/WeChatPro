@@ -18,5 +18,13 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  btnadd(e){
+    console.log(e);
+    
+  },
+  btnsub(e){
+    console.log(e);
+    
   }
 })
