@@ -7,7 +7,12 @@ page {
 }
 .backcolor .good_detail {
   font-size: 20rpx;
-  padding: 10rpx 0;
+  padding: 5rpx 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  width: 50%;
 }
 .backcolor .good_backcolor {
   background-color: #fff;
@@ -18,6 +23,7 @@ page {
 }
 .backcolor .good_backcolor .goods_content {
   display: flex;
+  margin-top: 30rpx;
 }
 .backcolor .good_backcolor .goods_content view {
   flex: 1;
@@ -43,7 +49,11 @@ page {
 }
 .backcolor .good_backcolor .goods_content navigator .conent .goods_up {
   width: 100%;
-  display: flex;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  margin-right: 20rpx;
 }
 .backcolor .good_backcolor .goods_content navigator .conent .goods_bottom {
   width: 100%;
@@ -59,14 +69,15 @@ page {
   padding: 0;
   width: 50rpx;
   border: 1rpx solid #ccc;
-  z-index: 100;
 }
 .backcolor .good_backcolor .goods_content navigator .conent .goods_bottom .add_count .button-right {
   padding: 0;
   width: 50rpx;
   margin-right: 20rpx;
   border: 1rpx solid #ccc;
-  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .backcolor .good_backcolor .goods_content navigator .conent .goods_bottom .add_count .number {
   border-top: 1rpx solid #ccc;
@@ -75,5 +86,28 @@ page {
   align-items: center;
   /*实现水平居中*/
   justify-content: center;
-  text-align: center;
+}
+.backcolor .good_backcolor_bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1rpx solid #000;
+}
+.backcolor .good_backcolor_bottom .count_bottom {
+  float: right;
+  display: flex;
+}
+.backcolor .good_backcolor_bottom .count_bottom .total_price {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8rpx;
+}
+.backcolor .good_backcolor_bottom .count_bottom button {
+  flex: 1;
+  border-radius: 5rpx;
+  background-color: #FF783B;
+  font-size: 28rpx;
 }

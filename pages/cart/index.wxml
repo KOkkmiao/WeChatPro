@@ -7,34 +7,34 @@
     <!-- 商品背景色 -->
     <view class="good_backcolor">
         <view class="all_check">
-            <checkbox>
+            <checkbox bindcountAll="countAll">
             </checkbox>
         </view>
         <!-- 商品 -->
-        <view class="goods_content">
+        <view class="goods_content" wx:for="{{goodsDetail}}" wx:key="goods_id">
             <view>
-                <checkbox>
+                <checkbox bindcountadd="countadd">
                 </checkbox>
             </view>
-            <navigator url="/pages/goods_detail/index?goods_id=43986" hover-stop-propagation="true">
+            <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
                 <view class="image">
-                    <image
-                        src="http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_400x400.jpg"
-                        mode="widthFix">
+                    <image src="{{item.pics[0].pics_mid}}" mode="widthFix">
                     </image>
                 </view>
                 <view class="conent">
                     <view class="goods_up">
-                        创意电脑桌子
+                        {{item.goods_name}}
                     </view>
                     <view class="goods_bottom">
                         <view class="good_price">
-                            ￥76
+                            ￥{{item.goods_price}}
                         </view>
                         <view class="add_count">
-                            <button bindtap="btnsub" class="button-left">-</button>
-                            <view class="number">1</view>
-                            <button bindtap="btnadd" class="button-right">+</button>
+                            <button disabled='{{item.num===1?true:false}}' catchtap="btnsub" data-index="{{index}}"
+                                hover-stop-propagation="true" class="button-left">-</button>
+                            <view class="number" catchtap="skipClick" hover-stop-propagation="true">{{item.num}}</view>
+                            <button catchtap="btnadd" data-index="{{index}}" hover-stop-propagation="true"
+                                class="button-right">+</button>
                         </view>
                     </view>
                 </view>
@@ -43,5 +43,13 @@
     </view>
 
     <!-- 下标商品计算 -->
+    <view class="good_backcolor_bottom">
+        <view class="count_bottom">
+            <view class="total_price">合计:￥0</view>
+            <button>
+                结算
+            </button>
 
+        </view>
+    </view>
 </view>

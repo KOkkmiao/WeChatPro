@@ -1,31 +1,42 @@
-page{
+page {
     height: 100%;
 }
+
 .backcolor {
     background-color: #ccc;
-    height: 100%;
+    height          : 100%;
+
     .good_detail {
-        font-size: 20rpx;
-        padding: 10rpx 0;
+        font-size         : 20rpx;
+        padding           : 5rpx 0;
+        display           : -webkit-box;
+        overflow          : hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        width             : 50%;
     }
 
     .good_backcolor {
         background-color: #fff;
-        border: 1rpx solid #000;
+        border          : 1rpx solid #000;
+
         .all_check {
-            checkbox{
+            checkbox {
                 padding: 5rpx 0 3rpx 5rpx;
             }
         }
 
         .goods_content {
-            display: flex;
+            display   : flex;
+            margin-top: 30rpx;
+
             view {
                 flex         : 1;
                 justify-items: center;
                 align-items  : center;
+
                 checkbox {
-                    height: 100%;
+                    height       : 100%;
                     display      : flex;
                     justify-items: center;
                     align-items  : center;
@@ -34,54 +45,91 @@ page{
 
             navigator {
                 display: flex;
-                flex  : 9;
+                flex   : 9;
+
                 .image {
-                    image{
+                    image {
                         width: 80%;
                     }
-                   
+
                 }
 
                 .conent {
-                    display: flex;
+                    display       : flex;
                     flex-direction: column;
-                    .goods_up{
-                        width: 100%;
-                        display: flex;
+
+                    .goods_up {
+                        width             : 100%;
+                        display           : -webkit-box;
+                        overflow          : hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 4;
+                        margin-right      : 20rpx;
                     }
-                    .goods_bottom{
-                        width: 100%;
+
+                    .goods_bottom {
+                        width  : 100%;
                         display: flex;
-                        .good_price{
+
+                        .good_price {
                             justify-content: left;
                         }
-                        .add_count{
+
+                        .add_count {
                             display: flex;
-                            .button-left{
+
+                            .button-left {
                                 padding: 0;
-                                width: 50rpx;
-                                border: 1rpx solid #ccc;
-                                z-index: 100;
+                                width  : 50rpx;
+                                border : 1rpx solid #ccc;
                             }
-                            .button-right{
-                                padding: 0;
-                                width: 50rpx;
-                                margin-right: 20rpx;
-                                border: 1rpx solid #ccc;
-                                z-index: 100;
+
+                            .button-right {
+                                padding        : 0;
+                                width          : 50rpx;
+                                margin-right   : 20rpx;
+                                border         : 1rpx solid #ccc;
+                                justify-content: center;
+                                align-items    : center;
+                                text-align     : center;
                             }
-                            .number{
-                                border-top: 1rpx solid #ccc;
-                                border-bottom: 1rpx solid #ccc;
-                                display: flex;
-                                align-items: center;
+
+                            .number {
+                                border-top     : 1rpx solid #ccc;
+                                border-bottom  : 1rpx solid #ccc;
+                                display        : flex;
+                                align-items    : center;
                                 /*实现水平居中*/
                                 justify-content: center;
-                                text-align: center;
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .good_backcolor_bottom {
+        position: fixed;
+        bottom  : 0;
+        width: 100%;
+        background-color: #fff;
+        border-top         : 1rpx solid #000;
+        .count_bottom {
+            float: right;
+            display: flex;
+            .total_price{
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-right: 8rpx;
+            }
+            button{
+                flex: 1;
+                border-radius: 5rpx;
+                background-color: #FF783B;
+                font-size: 28rpx;
             }
         }
     }
