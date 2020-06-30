@@ -5,51 +5,60 @@
     </view>
     <!-- 商品内容 -->
     <!-- 商品背景色 -->
-    <view class="good_backcolor">
-        <view class="all_check">
-            <checkbox bindcountAll="countAll">
-            </checkbox>
-        </view>
-        <!-- 商品 -->
-        <view class="goods_content" wx:for="{{goodsDetail}}" wx:key="goods_id">
-            <view>
-                <checkbox bindcountadd="countadd">
+    <block wx:if="{{goodsDetail.length!=0}}">
+        <view class="good_backcolor">
+            <view class="all_check">
+                <checkbox checked="{{isAllcheck}}" bindtap="countAll">
                 </checkbox>
             </view>
-            <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
-                <view class="image">
-                    <image src="{{item.pics[0].pics_mid}}" mode="widthFix">
-                    </image>
+            <!-- 商品 -->
+            <view class="goods_content" wx:for="{{goodsDetail}}" wx:key="goods_id">
+                <view>
+                    <checkbox checked="{{item.isChecked}}" data-index="{{index}}" bindtap="countadd">
+                    </checkbox>
                 </view>
-                <view class="conent">
-                    <view class="goods_up">
-                        {{item.goods_name}}
+                <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                    <view class="image">
+                        <image src="{{item.pics[0].pics_mid}}" mode="widthFix">
+                        </image>
                     </view>
-                    <view class="goods_bottom">
-                        <view class="good_price">
-                            ￥{{item.goods_price}}
+                    <view class="conent">
+                        <view class="goods_up">
+                            {{item.goods_name}}
                         </view>
-                        <view class="add_count">
-                            <button disabled='{{item.num===1?true:false}}' catchtap="btnsub" data-index="{{index}}"
-                                hover-stop-propagation="true" class="button-left">-</button>
-                            <view class="number" catchtap="skipClick" hover-stop-propagation="true">{{item.num}}</view>
-                            <button catchtap="btnadd" data-index="{{index}}" hover-stop-propagation="true"
-                                class="button-right">+</button>
+                        <view class="goods_bottom">
+                            <view class="good_price">
+                                ￥{{item.goods_price}}
+                            </view>
+                            <view class="add_count">
+                                <button catchtap="btnsub" data-index="{{index}}" hover-stop-propagation="true"
+                                    class="button-left">-</button>
+                                <view class="number" catchtap="skipClick" hover-stop-propagation="true">{{item.num}}
+                                </view>
+                                <button catchtap="btnadd" data-index="{{index}}" hover-stop-propagation="true"
+                                    class="button-right">+</button>
+                            </view>
                         </view>
                     </view>
+                </navigator>
+            </view>
+            <!-- 下标商品计算 -->
+            <view class="good_backcolor_bottom">
+                <view class="count_bottom">
+                    <view class="total_price">合计:{{totalPrice}}</view>
+                    <button>
+                        结算
+                    </button>
+
                 </view>
-            </navigator>
+            </view>
         </view>
-    </view>
+    </block>
+    <block wx:else>
+        <image
+            src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593512090021&di=d5382d1c7f0c8920239308dc3b3b6464&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"
+            mode="widthFix">
 
-    <!-- 下标商品计算 -->
-    <view class="good_backcolor_bottom">
-        <view class="count_bottom">
-            <view class="total_price">合计:￥0</view>
-            <button>
-                结算
-            </button>
-
-        </view>
-    </view>
+        </image>
+    </block>
 </view>

@@ -99,15 +99,16 @@ page {
   display: flex;
 }
 .backcolor .good_backcolor_bottom .count_bottom .total_price {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 8rpx;
 }
 .backcolor .good_backcolor_bottom .count_bottom button {
-  flex: 1;
   border-radius: 5rpx;
   background-color: #FF783B;
   font-size: 28rpx;
+  border-radius: 50rpx;
+  margin: 12rpx;
+  width: 175rpx;
 }
